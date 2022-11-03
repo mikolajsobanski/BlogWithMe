@@ -2,7 +2,6 @@
 <head>
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
     <link rel="stylesheet" type="text/css" href="public/css/posts.css">
-    <script src="https://kit.fontawesome.com/723297a893.js" crossorigin="anonymous"></script>
     <title>HOME</title>
 </head>
 <body>
@@ -14,7 +13,7 @@
             
             <ul>
                 <li>
-                    <a href="#" class="button">Posts</a>
+                    <a href="/home" class="button">Posts</a>
                 </li>
                 <li>
                     
@@ -39,31 +38,18 @@
 
                 </div>
                 <div class="add-post">
-                    <i class="fas fa-plus"></i>
-                    <div class="addBlog-text">Add blog</div>
+                    <a href="/addPost" class="addPost-link">Add post</a>
                 </div>
             </header>
             <section class="blogs">
 
-                    <div id="post-1">
-
-                        <img src="public/img/uploads/bc-g582.jpg">
-                        <div>
-                            <h2>Title</h2>
-                            <p>Description</p>
-                            <div class="social-section">
-                                <i class="fas fa-heart">600</i>
-                                <i class="fas fa-minus-square">101</i>
-                            </div>
-                        </div>
-                        
-                    </div>
+                    
                 
                 
                 <div id="post-2">
                     <img src="public/img/uploads/bc-g582.jpg">
                     <div>
-                        <h2>Title</h2>
+                        <div class="homeTitle">Title</div>
                         <p>Description</p>
                         <div class="social-section">
                             <i class="fas fa-heart">600</i>
@@ -75,7 +61,7 @@
                 <div id="post-3">
                         <img src="public/img/uploads/bc-g582.jpg">
                         <div>
-                            <h2>Title</h2>
+                            <div class="homeTitle">Title</div>
                             <p>Description</p>
                             <div class="social-section">
                                 <i class="fas fa-heart">600</i>
@@ -88,7 +74,7 @@
                 <div id="post-4">
                         <img src="public/img/uploads/bc-g582.jpg">
                         <div>
-                            <h2>Title</h2>
+                            <div class="homeTitle">Title</div>
                             <p>Description</p>
                             <div class="social-section">
                                 <i class="fas fa-heart">600</i>
@@ -100,7 +86,7 @@
                 <div id="post-5">
                     <img src="public/img/uploads/bc-g582.jpg">
                     <div>
-                        <h2>Title</h2>
+                        <div class="homeTitle">Title</div>
                         <p>Description</p>
                         <div class="social-section">
                             <i class="fas fa-heart">600</i>
@@ -112,7 +98,7 @@
             <div id="post-6">
                 <img src="public/img/uploads/bc-g582.jpg">
                 <div>
-                    <h2>Title</h2>
+                    <div class="homeTitle">Title</div>
                     <p>Description</p>
                     <div class="social-section">
                         <i class="fas fa-heart">600</i>
@@ -124,7 +110,7 @@
         <div id="post-7">
             <img src="public/img/uploads/bc-g582.jpg">
             <div>
-                <h2>Title</h2>
+                <div class="homeTitle">Title</div>
                 <p>Description</p>
                 <div class="social-section">
                     <i class="fas fa-heart">600</i>
@@ -133,6 +119,20 @@
             </div>
         
         </div>
+
+        <div id="post-1">
+
+                        <img src="public/uploads/<?= $post->getImage() ?>">
+                        <div>
+                            <div class="homeTitle"><?= $post->getTitle() ?></div>
+                            <p><?= $post->getDescription() ?></p>
+                            <div class="social-section">
+                                <i class="fas fa-heart">600</i>
+                                <i class="fas fa-minus-square">101</i>
+                            </div>
+                        </div>
+                        
+                    </div>
             </section>
         </main>
     </div>
