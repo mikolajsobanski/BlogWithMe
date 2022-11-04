@@ -41,11 +41,9 @@
                     <a href="/addPost" class="addPost-link">Add post</a>
                 </div>
             </header>
+            
             <section class="blogs">
-
-                    
-                
-                
+    
                 <div id="post-2">
                     <img src="public/img/uploads/bc-g582.jpg">
                     <div>
@@ -94,45 +92,32 @@
                         </div>
                     </div>
                 
-            </div>
-            <div id="post-6">
-                <img src="public/img/uploads/bc-g582.jpg">
-                <div>
-                    <div class="homeTitle">Title</div>
-                    <p>Description</p>
-                    <div class="social-section">
-                        <i class="fas fa-heart">600</i>
-                        <i class="fas fa-minus-square">101</i>
-                    </div>
+                </div>
+                <div id="post-6">
+                    <img src="public/img/uploads/bc-g582.jpg">
+                    <div>
+                        <div class="homeTitle">Title</div>
+                        <p>Description</p>
+                        <div class="social-section">
+                            <i class="fas fa-heart">600</i>
+                            <i class="fas fa-minus-square">101</i>
+                        </div>
                 </div>
             
-        </div>
-        <div id="post-7">
-            <img src="public/img/uploads/bc-g582.jpg">
-            <div>
-                <div class="homeTitle">Title</div>
-                <p>Description</p>
-                <div class="social-section">
-                    <i class="fas fa-heart">600</i>
-                    <i class="fas fa-minus-square">101</i>
                 </div>
-            </div>
-        
-        </div>
-
-        <div id="post-1">
-
-                        <img src="public/uploads/<?= $post->getImage() ?>">
-                        <div>
-                            <div class="homeTitle"><?= $post->getTitle() ?></div>
-                            <p><?= $post->getDescription() ?></p>
-                            <div class="social-section">
-                                <i class="fas fa-heart">600</i>
-                                <i class="fas fa-minus-square">101</i>
-                            </div>
+                <div id="post-7">
+                    <img src="public/img/uploads/bc-g582.jpg">
+                    <div>
+                        <div class="homeTitle">Title</div>
+                        <p>Description</p>
+                        <div class="social-section">
+                            <i class="fas fa-heart">600</i>
+                            <i class="fas fa-minus-square">101</i>
                         </div>
-                        
                     </div>
+                
+                </div>
+
             </section>
         </main>
     </div>
