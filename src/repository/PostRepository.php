@@ -1,0 +1,72 @@
+<?php
+
+require_once 'Repository.php';
+require_once __DIR__.'/../models/User.php';
+
+class PostRepository extends Repository
+{
+
+    //function which return user by his email, or return null
+    public function getPost(int $id): ?Post
+    {
+        $stmt = $this->database->connect()->prepare('
+            SELECT * FROM public.posts WHERE id = :id
+        ');
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
+
+        $post = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if ($post == false) {
+            return null; //there should be catch exception
+        }
+
+        return new Post(
+            $post['title'],
+            $post['description'],
+            $post['image'],
+            $post['content']
+        );
+    }
+
+    public function addPost(Post $post): void
+    {
+        $date = new DateTime();
+        $stmt = $this->database->connect()->prepare('
+            INSERT INTO public.posts (title, description, content ,id_asigned_by ,created_at ,image) VALUES (?,?,?,?,?,?)
+        ');
+        $asigned_by = 18;
+        $stmt->execute([
+            $post->getTitle(),
+            $post->getDescription(),
+            $post->getContent(),
+            $asigned_by,
+            $date->format('Y-m-d'),
+            $post-> getImage()
+        ]);
+    }
+
+    public function getPosts(): array
+    {
+        $result = [];
+
+        $stmt = $this->database->connect()->prepare('
+            SELECT * FROM posts;
+        ');
+        $stmt->execute();
+        $posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+         foreach ($posts as $post) {
+             $result[] = new Post(
+                 $post['title'],
+                 $post['description'],
+                 $post['image'],
+                 $post['content']
+             );
+         }
+
+        return $result;
+    }
+
+    
+}

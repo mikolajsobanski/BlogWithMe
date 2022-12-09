@@ -27,6 +27,10 @@
                     
                     <a href="#" class="button">Settings</a>
                 </li>
+                <li>
+                    
+                    <a href="/" class="button">Logout</a>
+                </li>
             </ul>
         </nav>
         <main>
@@ -43,80 +47,20 @@
             </header>
             
             <section class="blogs">
+                <?php foreach($posts as $post): ?>
     
                 <div id="post-2">
-                    <img src="public/img/uploads/bc-g582.jpg">
+                    <img src="public/uploads/<?= $post-> getImage(); ?>">
                     <div>
-                        <div class="homeTitle">Title</div>
-                        <p>Description</p>
+                        <div class="homeTitle"><?= $post-> getTitle(); ?></div>
+                        <p><?= $post-> getDescription(); ?></p>
                         <div class="social-section">
                             <i class="fas fa-heart">600</i>
                             <i class="fas fa-minus-square">101</i>
                         </div>
                     </div>
                 </div>
-                
-                <div id="post-3">
-                        <img src="public/img/uploads/bc-g582.jpg">
-                        <div>
-                            <div class="homeTitle">Title</div>
-                            <p>Description</p>
-                            <div class="social-section">
-                                <i class="fas fa-heart">600</i>
-                                <i class="fas fa-minus-square">101</i>
-                            </div>
-                        </div>
-                    
-                </div>
-                
-                <div id="post-4">
-                        <img src="public/img/uploads/bc-g582.jpg">
-                        <div>
-                            <div class="homeTitle">Title</div>
-                            <p>Description</p>
-                            <div class="social-section">
-                                <i class="fas fa-heart">600</i>
-                                <i class="fas fa-minus-square">101</i>
-                            </div>
-                        </div>
-                    
-                </div>
-                <div id="post-5">
-                    <img src="public/img/uploads/bc-g582.jpg">
-                    <div>
-                        <div class="homeTitle">Title</div>
-                        <p>Description</p>
-                        <div class="social-section">
-                            <i class="fas fa-heart">600</i>
-                            <i class="fas fa-minus-square">101</i>
-                        </div>
-                    </div>
-                
-                </div>
-                <div id="post-6">
-                    <img src="public/img/uploads/bc-g582.jpg">
-                    <div>
-                        <div class="homeTitle">Title</div>
-                        <p>Description</p>
-                        <div class="social-section">
-                            <i class="fas fa-heart">600</i>
-                            <i class="fas fa-minus-square">101</i>
-                        </div>
-                </div>
-            
-                </div>
-                <div id="post-7">
-                    <img src="public/img/uploads/bc-g582.jpg">
-                    <div>
-                        <div class="homeTitle">Title</div>
-                        <p>Description</p>
-                        <div class="social-section">
-                            <i class="fas fa-heart">600</i>
-                            <i class="fas fa-minus-square">101</i>
-                        </div>
-                    </div>
-                
-                </div>
+                <?php endforeach; ?>
 
             </section>
         </main>

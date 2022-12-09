@@ -174,9 +174,8 @@ header{
         width: 100%;
     }
 
-    form {
-        margin: auto;
-        width: 90%;
+    form.login {
+        width: 100%;
     }
 
 }
