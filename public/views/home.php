@@ -2,44 +2,18 @@
 <head>
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
     <link rel="stylesheet" type="text/css" href="public/css/posts.css">
+    <script type="text/javascript" src="./public/js/search.js" defer></script>
     <title>HOME</title>
 </head>
 <body>
     <div class="home-container">
         <nav>
-            <div class="home-logo">
-                <img src="public/img/logo.svg">
-            </div>
-            
-            <ul>
-                <li>
-                    <a href="/home" class="button">Posts</a>
-                </li>
-                <li>
-                    
-                    <a href="#" class="button">People</a>
-                </li>
-                <li>
-                    
-                    <a href="#" class="button">Favourite</a>
-                </li>
-                <li>
-                    
-                    <a href="#" class="button">Settings</a>
-                </li>
-                <li>
-                    
-                    <a href="/" class="button">Logout</a>
-                </li>
-            </ul>
+            <?php include('./public/components/navbar.php')?>
         </nav>
         <main>
             <header>
                 <div class="search-bar">
-                    <form>
-                        <input placeholder="Search post">
-                    </form>
-
+                     <input placeholder="search post">
                 </div>
                 <div class="add-post">
                     <a href="/addPost" class="addPost-link">Add post</a>
@@ -66,3 +40,17 @@
         </main>
     </div>
 </body>
+
+<template id="post-template">
+    <div id="">
+        <img src="">
+        <div>
+            <h2>title</h2>
+            <p>description</p>
+            <div class="social-section">
+                <i class="fas fa-heart"> 0</i>
+                <i class="fas fa-minus-square"> 0</i>
+            </div>
+        </div>
+    </div>
+</template>

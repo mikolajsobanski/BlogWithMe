@@ -10,4 +10,5 @@ Router::get('home', 'PostController');
 Router::post('login', 'SecurityController');
 Router::post('register', 'SecurityController');
 Router::post('addPost', 'PostController');
+Router::post('search', 'PostController');
 Router::run($path);

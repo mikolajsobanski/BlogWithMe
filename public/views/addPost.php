@@ -31,17 +31,7 @@
             </ul>
         </nav>
         <main>
-            <header>
-                <div class="search-bar">
-                    <form>
-                        <input placeholder="Search post">
-                    </form>
-
-                </div>
-                <div class="add-post">
-                    <a href="/addPost" class="addPost-link">Add post</a>
-                </div>
-            </header>
+            
             <section class="post-form">
                 <div class="uploadTitle">Add post</div>
                 <form action="addPost" method="POST" ENCTYPE="multipart/form-data">
