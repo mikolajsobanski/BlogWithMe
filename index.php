@@ -11,4 +11,7 @@ Router::post('login', 'SecurityController');
 Router::post('register', 'SecurityController');
 Router::post('addPost', 'PostController');
 Router::post('search', 'PostController');
+Router::get('like', 'PostController');
+Router::get('dislike', 'PostController');
+
 Router::run($path);

@@ -7,10 +7,10 @@ section {
     overflow: auto;
 }
 
-.blogs>div{
+.blogs > div{
     height: 15vh;
 }
-.blogs>div>img {
+.blogs > div > img {
     height: 100%;
     width: 30%;
     float: left;
@@ -18,7 +18,7 @@ section {
     
 }
 
-.blogs>div>div{
+.blogs > div > div{
     height: 100%;
     margin-left: 1em;
     background: #2BDB71;
@@ -28,8 +28,9 @@ section {
     width: 60%;
     float: left;
 }
-.blogs>div>div>.homeTitle{
-    margin: auto;
-    margin-left: 1em;
+
+.social-section > i:hover {
+    cursor: pointer;
 }
+
 

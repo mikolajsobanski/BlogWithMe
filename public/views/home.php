@@ -2,7 +2,9 @@
 <head>
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
     <link rel="stylesheet" type="text/css" href="public/css/posts.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <script type="text/javascript" src="./public/js/search.js" defer></script>
+    <script type="text/javascript" src="./public/js/statistics.js" defer></script>
     <title>HOME</title>
 </head>
 <body>
@@ -23,14 +25,14 @@
             <section class="blogs">
                 <?php foreach($posts as $post): ?>
     
-                <div id="post-2">
-                    <img src="public/uploads/<?= $post-> getImage(); ?>">
+                <div id="<?= $post->getId(); ?>">
+                    <img src="public/uploads/<?= $post->getImage(); ?>">
                     <div>
-                        <div class="homeTitle"><?= $post-> getTitle(); ?></div>
-                        <p><?= $post-> getDescription(); ?></p>
+                        <h2><?= $post->getTitle(); ?></h2>
+                        <p><?= $post->getDescription(); ?></p>
                         <div class="social-section">
-                            <i class="fas fa-heart">600</i>
-                            <i class="fas fa-minus-square">101</i>
+                            <i class="fas fa-heart"> <?= $post->getLike(); ?></i>
+                            <i class="fas fa-minus-square"> <?= $post->getDislike(); ?></i>
                         </div>
                     </div>
                 </div>

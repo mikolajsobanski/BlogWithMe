@@ -61,7 +61,10 @@ class PostRepository extends Repository
                  $post['title'],
                  $post['description'],
                  $post['image'],
-                 $post['content']
+                 $post['content'],
+                 $post['like'],
+                 $post['dislike'],
+                 $post['id']
              );
          }
 
@@ -81,5 +84,22 @@ class PostRepository extends Repository
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    public function like(int $id) {
+        $stmt = $this->database->connect()->prepare('
+           UPDATE posts SET "like" = "like" + 1 WHERE id = :id
+        ');
+
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
+   }
+
+   public function dislike(int $id) {
+       $stmt = $this->database->connect()->prepare('
+           UPDATE posts SET dislike = dislike + 1 WHERE id = :id
+        ');
+
+       $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+       $stmt->execute();
+   }
     
 }
