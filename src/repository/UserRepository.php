@@ -1,6 +1,7 @@
 <?php
 
 require_once 'Repository.php';
+require_once __DIR__.'/../models/Admin.php';
 require_once __DIR__.'/../models/User.php';
 
 class UserRepository extends Repository
@@ -26,6 +27,28 @@ class UserRepository extends Repository
             $user['password'],
             $user['name'],
             $user['surname']
+        );
+    }
+
+    public function getAdmin(string $email): ?Admin
+    {
+        $stmt = $this->database->connect()->prepare('
+            SELECT * FROM admins WHERE email = :email
+        ');
+        $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+        $stmt->execute();
+
+        $admin = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if ($admin == false) {
+            return null; //there should be catch exception
+        }
+
+        return new Admin(
+            $admin['email'],
+            $admin['password'],
+            $admin['name'],
+            $admin['surname']
         );
     }
 
@@ -68,4 +91,26 @@ class UserRepository extends Repository
         $data = $stmt->fetch(PDO::FETCH_ASSOC);
         return $data['id'];
     }
+
+    public function getUserinfo()
+    {
+        $stmt = $this->database->connect()->prepare('
+            SELECT * FROM userinfo;
+        ');
+        $stmt->execute();
+
+        $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach ($users as $user) {
+            $result[] = new User(
+                $user['email'],
+                $user['name'],
+                $user['surname'],
+                $user['phone'],
+            );
+        }
+
+       return $result;
+    }
+
 }

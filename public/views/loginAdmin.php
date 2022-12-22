@@ -12,7 +12,7 @@
 
         <div class="login-container">
             
-            <form class="login" action="login" method="POST">
+            <form class="loginAdmin" action="loginAdmin" method="POST">
                 <div class="messages">
                     <?php if(isset($messages)){
                         foreach ($messages as $message){
@@ -22,13 +22,11 @@
                     }
                     ?>
                 </div>
-                <h2>Login to app</h2>
+                
                 <input name="email" type="text" placeholder="email@email.com">
                 <input name="password" type="password" placeholder="***********">
                 <button type="submit">LOGIN</button>
-                <div class="gotoRegister">
-                    Do not have account? click <a href="/register" class="register-link">Register</a>
-                </div>
+                
             </form>
         </div>
         

@@ -22,7 +22,6 @@
                     }
                     ?>
                 </div>
-                <h2>Register to app</h2>
                 <input name="name" type="text" placeholder="Enter name">
                 <input name="surname" type="text" placeholder="Enter surname">
                 <input name="email" type="text" placeholder="Enter email email@email.com">

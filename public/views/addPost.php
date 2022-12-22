@@ -22,11 +22,11 @@
                 </li>
                 <li>
                     
-                    <a href="#" class="button">Favourite</a>
+                    <a href="/favourite" class="button">Favourite</a>
                 </li>
                 <li>
                     
-                    <a href="#" class="button">Settings</a>
+                    <a href="/logout" class="button">Logout</a>
                 </li>
             </ul>
         </nav>

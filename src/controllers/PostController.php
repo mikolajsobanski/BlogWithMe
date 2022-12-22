@@ -21,12 +21,46 @@ class PostController extends AppController {
 
     public function home()
     {
+        if(!isset($_COOKIE["type"]))
+        {
+            header("Location: {$url}/");
+        }
        $posts = $this->postRepository->getPosts();
        $this->render('home',['posts' => $posts]);
+       
+    }
+
+    public function favourite()
+    {
+        if(!isset($_COOKIE["type"]))
+        {
+            header("Location: {$url}/");
+        }
+       $posts = $this->postRepository->getFavourite();
+       $this->render('home',['posts' => $posts]);
+    }
+
+    public function post(string $id)
+    {
+        if(!isset($_COOKIE["type"]))
+        {
+            header("Location: {$url}/");
+        }
+       $tmp = (int) $id;
+       $post = $this->postRepository->getPost($tmp);
+       
+       
+       $this->render('post', ['post' => $post]);
+        
+        
     }
 
     public function addPost()
     {   
+        if(!isset($_COOKIE["type"]))
+        {
+            header("Location: {$url}/");
+        }
         if ($this->isPost() && is_uploaded_file($_FILES['file']['tmp_name']) && $this->validate($_FILES['file'])) {
             move_uploaded_file(
                 $_FILES['file']['tmp_name'], 
@@ -45,6 +79,10 @@ class PostController extends AppController {
 
     public function search()
     {
+        if(!isset($_COOKIE["type"]))
+        {
+            header("Location: {$url}/");
+        }
         $contentType = isset($_SERVER["CONTENT_TYPE"]) ? trim($_SERVER["CONTENT_TYPE"]) : '';
 
         if ($contentType === "application/json") {
@@ -59,11 +97,19 @@ class PostController extends AppController {
     }
 
     public function like(int $id) {
+        if(!isset($_COOKIE["type"]))
+        {
+            header("Location: {$url}/");
+        }
         $this->postRepository->like($id);
         http_response_code(200);
     }
 
     public function dislike(int $id) {
+        if(!isset($_COOKIE["type"]))
+        {
+            header("Location: {$url}/");
+        }
         $this->postRepository->dislike($id);
         http_response_code(200);
     }

@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
@@ -14,28 +16,33 @@
         </nav>
         <main>
             <header>
-                <div class="search-bar">
-                     <input placeholder="search post">
-                </div>
-                <div class="add-post">
-                    <a href="/addPost" class="addPost-link">Add post</a>
-                </div>
+            <?php include('./public/components/header.php')?>
             </header>
             
             <section class="blogs">
                 <?php foreach($posts as $post): ?>
-    
+                
                 <div id="<?= $post->getId(); ?>">
                     <img src="public/uploads/<?= $post->getImage(); ?>">
                     <div>
+                            
                         <h2><?= $post->getTitle(); ?></h2>
-                        <p><?= $post->getDescription(); ?></p>
+                       
+                        
+                        <p> <?= $post->getDescription(); ?></p>
+                       
+
                         <div class="social-section">
                             <i class="fas fa-heart"> <?= $post->getLike(); ?></i>
                             <i class="fas fa-minus-square"> <?= $post->getDislike(); ?></i>
+                            <a href="post/<?= $post->getId(); ?>" >See Post</a>
+                            
                         </div>
+                        
+                    
                     </div>
                 </div>
+                
                 <?php endforeach; ?>
 
             </section>
@@ -52,6 +59,7 @@
             <div class="social-section">
                 <i class="fas fa-heart"> 0</i>
                 <i class="fas fa-minus-square"> 0</i>
+                <a href="post/<?= $post->getId(); ?>" >See Post</a>
             </div>
         </div>
     </div>

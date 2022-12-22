@@ -9,6 +9,7 @@ section {
     display: flex;
     flex-direction: column;
     padding: 0.7em;
+    
 }
 .post-form>.uploadTitle{
     text-align: center;
@@ -41,3 +42,23 @@ section {
     color: white;
     opacity: 1; /* Firefox */
   }
+
+
+  @media only screen and (max-device-width:420px){
+    
+    .button{
+        margin-left: 0;
+        width: 90%;
+        padding: 0.2em;
+        font-size: 30px;
+    }
+    
+    .post-form>form>.addImage-button{
+        background: #2BDB71;
+        width: 50vw;
+        margin: auto;
+    }
+
+
+
+}

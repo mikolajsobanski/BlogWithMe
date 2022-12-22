@@ -22,10 +22,14 @@ class PostRepository extends Repository
         }
 
         return new Post(
-            $post['title'],
-            $post['description'],
-            $post['image'],
-            $post['content']
+                $post['title'],
+                $post['description'],
+                $post['image'],
+                $post['content'],
+                $post['like'],
+                $post['dislike'],
+                $post['id']
+            
         );
     }
 
@@ -101,5 +105,30 @@ class PostRepository extends Repository
        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
        $stmt->execute();
    }
+
+   public function getFavourite(): array
+    {
+        $result = [];
+
+        $stmt = $this->database->connect()->prepare('
+            SELECT * FROM posts ORDER BY "like" DESC; 
+        ');
+        $stmt->execute();
+        $posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+         foreach ($posts as $post) {
+             $result[] = new Post(
+                 $post['title'],
+                 $post['description'],
+                 $post['image'],
+                 $post['content'],
+                 $post['like'],
+                 $post['dislike'],
+                 $post['id']
+             );
+         }
+
+        return $result;
+    }
     
 }

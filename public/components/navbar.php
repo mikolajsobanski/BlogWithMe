@@ -6,7 +6,7 @@
 <body>  
             
             <div class="home-logo">
-                <img src="public/img/logo.svg">
+                <img src="/public/img/logo.svg">
             </div>
             
             <ul>
@@ -15,19 +15,15 @@
                 </li>
                 <li>
                     
-                    <a href="#" class="button">People</a>
+                    <a href="/people" class="button">People</a>
                 </li>
                 <li>
                     
-                    <a href="#" class="button">Favourite</a>
+                    <a href="/favourite" class="button">Favourite</a>
                 </li>
                 <li>
                     
-                    <a href="#" class="button">Settings</a>
-                </li>
-                <li>
-                    
-                    <a href="/" class="button">Logout</a>
+                    <a href="/logout" class="button">Logout</a>
                 </li>
             </ul>
 </body>
