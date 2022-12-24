@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" type="text/css" href="public/css/style.css">
-    <link rel="stylesheet" type="text/css" href="public/css/posts.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/posts.css">
 </head>         
 <body>  
             
@@ -20,6 +20,10 @@
                 <li>
                     
                     <a href="/favourite" class="button">Favourite</a>
+                </li>
+                <li>
+                    
+                    <a href="/time" class="button">Time</a>
                 </li>
                 <li>
                     

@@ -14,4 +14,9 @@ class DefaultController extends AppController {
        $this->render('register');
     }
 
+    public function time()
+    {
+        $this->render('time');
+    }
+
 }
