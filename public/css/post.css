@@ -1,0 +1,25 @@
+.post-details-section{
+
+    justify-content: center;
+}
+
+.post-details-section > div > img {
+    
+    margin: auto;
+    
+}
+.post-details-section > div > div{
+    
+    text-align: center;
+    background: #2BDB71;
+    color: white;
+    box-shadow: 0px 3px 6px grey;
+    border-radius: 25px;
+    padding: 1em;
+}
+
+.post-details-section > div > img > div > h2{
+    
+    margin: auto;
+    
+}

@@ -1,12 +1,10 @@
 
 <!DOCTYPE html>
 <head>
-    <!-- <link rel="stylesheet" type="text/css" href="public/css/style.css"> -->
-    <!-- <link rel="stylesheet" type="text/css" href=> -->
-    <link rel="stylesheet" type="text/css" href="/public/css/style.css">
-    <link rel="stylesheet" type="text/css" href="/public/css/posts.css">
+<link rel="stylesheet" type="text/css" href="/public/css/post.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
-    
+    <script type="text/javascript" src="/public/js/search.js" defer></script>
+    <script type="text/javascript" src="/public/js/statistics.js" defer></script>
     <title>Post</title>
 </head>
 <body>
