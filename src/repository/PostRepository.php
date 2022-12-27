@@ -39,7 +39,7 @@ class PostRepository extends Repository
         $stmt = $this->database->connect()->prepare('
             INSERT INTO public.posts (title, description, content ,id_asigned_by ,created_at ,image) VALUES (?,?,?,?,?,?)
         ');
-        $asigned_by = 18;
+        $asigned_by = 20;
         $stmt->execute([
             $post->getTitle(),
             $post->getDescription(),

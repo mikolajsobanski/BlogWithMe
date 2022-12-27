@@ -1,0 +1,55 @@
+.users{
+  width: 25em;
+  height: 60vh;
+  overflow-y: scroll;
+  scrollbar-color: rebeccapurple green;
+  scrollbar-width: thin;
+  background: transparent linear-gradient(180deg, #2BDB71 100%, #2251B9 0%) 0% 0% no-repeat padding-box;
+  }
+
+
+
+.home-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+}
+
+.posts-section{
+  display: grid;
+  grid-template-rows: auto;
+  grid-gap: 2em;
+  padding: 2em;
+  overflow: auto;
+  width: 55em;
+  margin-top: 5em;
+  height: 60vh;
+  overflow-y: scroll;
+  scrollbar-color: rebeccapurple green;
+  scrollbar-width: thin;
+}
+
+.posts-section > div{
+  height: 15vh;
+  
+}
+.posts-section > div > img {
+  height: 100%;
+  width: 30%;
+  float: left;
+  object-fit: cover;
+  
+}
+
+.posts-section > div > div{
+  height: 100%;
+  margin-left: 1em;
+  background: #2BDB71;
+  color: white;
+  box-shadow: 0px 3px 6px grey;
+  border-radius: 25px;
+  width: 60%;
+  float: left;
+  
+}

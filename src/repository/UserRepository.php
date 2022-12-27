@@ -30,27 +30,6 @@ class UserRepository extends Repository
         );
     }
 
-    public function getAdmin(string $email): ?Admin
-    {
-        $stmt = $this->database->connect()->prepare('
-            SELECT * FROM admins WHERE email = :email
-        ');
-        $stmt->bindParam(':email', $email, PDO::PARAM_STR);
-        $stmt->execute();
-
-        $admin = $stmt->fetch(PDO::FETCH_ASSOC);
-
-        if ($admin == false) {
-            return null; //there should be catch exception
-        }
-
-        return new Admin(
-            $admin['email'],
-            $admin['password'],
-            $admin['name'],
-            $admin['surname']
-        );
-    }
 
     public function setUser(User $user)
     {
