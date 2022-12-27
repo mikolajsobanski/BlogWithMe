@@ -2,7 +2,10 @@
 <head>
     <link rel="stylesheet" type="text/css" href="public/css/register.css">
     <script type="text/javascript" src="./public/js/script.js" defer></script>
-    <title>Register</title>
+    <?php
+    $title = "Register";
+    include("./public/constants/title.php");
+    ?>
 </head>
 <body>
     <div class="container">

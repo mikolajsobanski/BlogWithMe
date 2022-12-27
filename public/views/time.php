@@ -4,10 +4,11 @@
 <head>
     
     <link rel="stylesheet" type="text/css" href="public/css/time.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
-    <script type="text/javascript" src="./public/js/search.js" defer></script>
     <script type="text/javascript" src="./public/js/time.js" defer></script>
-    <title>TIME</title>
+    <?php
+    $title = "Time";
+    include("./public/constants/title.php");
+    ?>
 </head>
 <body onload="initClock()">
     <div class="home-container">

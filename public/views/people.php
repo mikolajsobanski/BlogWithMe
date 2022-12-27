@@ -4,9 +4,12 @@
 <head>
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
     <link rel="stylesheet" type="text/css" href="public/css/posts.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <?php include("./public/constants/iconLink.php") ?>
     <script type="text/javascript" src="./public/js/search.js" defer></script>
-    <title>PEOPLE</title>
+    <?php
+    $title = "People";
+    include("./public/constants/title.php");
+    ?>
 </head>
 <body>
     <div class="home-container">

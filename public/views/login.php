@@ -2,7 +2,10 @@
 <head>
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
     <link rel="stylesheet" type="text/css" href="public/css/login.css">
-    <title>LOGIN PAGE</title>
+    <?php
+    $title = "Login";
+    include("./public/constants/title.php");
+    ?>
 </head>
 <body>
     <div class="container">
