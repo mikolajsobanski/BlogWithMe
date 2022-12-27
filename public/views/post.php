@@ -2,10 +2,13 @@
 <!DOCTYPE html>
 <head>
 <link rel="stylesheet" type="text/css" href="/public/css/post.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <?php include("./public/constants/iconLink.php") ?>
     <script type="text/javascript" src="/public/js/search.js" defer></script>
     <script type="text/javascript" src="/public/js/statistics.js" defer></script>
-    <title>Post</title>
+    <?php
+    $title = "Post";
+    include("./public/constants/title.php");
+    ?>
 </head>
 <body>
     <div class="home-container">

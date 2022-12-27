@@ -2,9 +2,11 @@
 <!DOCTYPE html>
 <head>
 <link rel="stylesheet" type="text/css" href="/public/css/adminPanel.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
-    
-    <title>ADMIN PANEL</title>
+    <?php include("./public/constants/iconLink.php") ?>
+    <?php
+    $title = "Admin panel";
+    include("./public/constants/title.php");
+    ?>
 </head>
 <body>
     <div class="home-container">

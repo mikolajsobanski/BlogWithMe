@@ -3,7 +3,10 @@
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
     <link rel="stylesheet" type="text/css" href="public/css/uploadPost.css">
 
-    <title>Add Post</title>
+    <?php
+    $title = "Upload post";
+    include("./public/constants/title.php");
+    ?>
 </head>
 <body>
     <div class="home-container">
