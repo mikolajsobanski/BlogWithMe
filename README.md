@@ -1,6 +1,6 @@
 # BlogWithMe
 
-BlogWithMe is an app to share your memories with everyone, write your own story and add some crazy photo from this day!
+BlogWithMe is an app to share your memories with everyone, write your own story and add some crazy photo from that day!
 
  
 ## Table of contents
